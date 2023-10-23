@@ -24,10 +24,11 @@ class MyService {
         {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.28', phased: false, release: false},
         {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.5', phased: false, release: false},
         {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.10', phased: false, release: false},
+        {name: 'Themes', uuid: '95501678-6687-4fb3-92ab-1155f47f839e', ver: '2.1.4', phased: false, release: true},
         {name: 'Application Header', uuid: '9bc8af38-dd67-4d33-beb0-7d6b39a6e98d', ver: '0.5.33', phased: false, release: false},
         {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.14', phased: false, release: false},
         {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.46', phased: false, release: false},
-        {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.5', phased: true, release: true},
+        {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.5', phased: false, release: true},
         {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.13', phased: true, release: true}
     ]
 
