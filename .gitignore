@@ -1,0 +1,5 @@
+/publish
+var_sk
+/node_modules
+/server-side/build
+/server-side/node_modules
