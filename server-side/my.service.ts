@@ -1,7 +1,5 @@
-import { PapiClient, InstalledAddon} from '@pepperi-addons/papi-sdk'
+import { PapiClient} from '@pepperi-addons/papi-sdk'
 import { Client} from '@pepperi-addons/debug-server';
-//import jwt_decode from "jwt-decode";
-//import { GenericListMenusDataViews } from './metadata';
 import Semver from "semver";
 
 const sleep = (milliseconds) => {
