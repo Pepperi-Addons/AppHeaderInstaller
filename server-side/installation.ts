@@ -21,11 +21,11 @@ import MyService from './my.service';
 export async function install(client: Client, request: Request): Promise<AddonAPISyncResult> {
     const service = new MyService(client);
     try {
-         const appHeaderInstallResult = await service.installAppHeader();
+         await service.installAppHeader();
          return {success: true, resultObject: {}}
      }
      catch (e: any) {
-         return {success: false, errorMessage: e}
+         return {success: false, errorMessage: e.message}
      }
 
     //return { success: true, resultObject: {} };
