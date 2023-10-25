@@ -1,7 +1,5 @@
-import { PapiClient, InstalledAddon} from '@pepperi-addons/papi-sdk'
+import { PapiClient} from '@pepperi-addons/papi-sdk'
 import { Client} from '@pepperi-addons/debug-server';
-//import jwt_decode from "jwt-decode";
-//import { GenericListMenusDataViews } from './metadata';
 import Semver from "semver";
 
 const sleep = (milliseconds) => {
@@ -57,17 +55,17 @@ class MyService {
                 if (addOnToUpdate) {
                     if (Semver.lt(addOnToUpdate.Version, this.addOnsToInstall[i].ver)){ //upgrade
                         const res = await this.papiClient.addons.installedAddons.addonUUID(this.addOnsToInstall[i].uuid).upgrade(this.addOnsToInstall[i].ver);
-                        await this.installAddonRecursive(res);
+                        await this.installAddonRecursive(res, this.addOnsToInstall[i].name);
                         }
                 } else
                 { //install
                     const res = await this.papiClient.addons.installedAddons.addonUUID(this.addOnsToInstall[i].uuid).install(this.addOnsToInstall[i].ver);
-                    await this.installAddonRecursive(res);
+                    await this.installAddonRecursive(res, this.addOnsToInstall[i].name);
                 }
                 try { ///upgrade to the phased version if needed
                     if (this.addOnsToInstall[i].phased) { //if phased = true we will upgrade to the latest phased
                         const res = await this.papiClient.addons.installedAddons.addonUUID(this.addOnsToInstall[i].uuid).upgrade();
-                        await this.installAddonRecursive(res);
+                        await this.installAddonRecursive(res, this.addOnsToInstall[i].name);
                     }
                 }
                 catch (err){ console.log(err); }
@@ -82,7 +80,7 @@ class MyService {
     getInstalledAddons(): Promise<any[]> {
         return this.papiClient.addons.installedAddons.iter({}).toArray();
     }
-    async installAddonRecursive(result: any){
+    async installAddonRecursive(result: any, addonName: string){
         let statusResponse = await this.papiClient.get(`/audit_logs/${result.ExecutionUUID}`);
 
         while (statusResponse === undefined || statusResponse.Status.Name === 'New' || statusResponse.Status.Name === 'InProgress' || statusResponse.Status.Name === 'Started') {
@@ -90,10 +88,10 @@ class MyService {
             statusResponse = await this.papiClient.get(`/audit_logs/${result.ExecutionUUID}`);
         }
         if (statusResponse.Status.Name === 'Success') {
-            console.log("addon installed upgraded successfuly.");
+            console.log(`addon ${addonName} installed upgraded successfuly.`);
         }
         else {
-            console.log("failed to install upgrade addon.");
+            console.log(`failed to install upgrade ${addonName} addon.`);
             throw new Error(statusResponse.AuditInfo.ErrorMessage);
         }
     }
