@@ -83,11 +83,11 @@ class MyService {
         return this.papiClient.addons.installedAddons.iter({}).toArray();
     }
     async installAddonRecursive(result: any){
-        let statusResponse = await this.papiClient.get(`/audit_logs/'${result.ExecutionUUID}`);
+        let statusResponse = await this.papiClient.get(`/audit_logs/${result.ExecutionUUID}`);
 
         while (statusResponse === undefined || statusResponse.Status.Name === 'New' || statusResponse.Status.Name === 'InProgress' || statusResponse.Status.Name === 'Started') {
             await sleep(1000);
-            statusResponse = await this.papiClient.get(`/audit_logs/'${result.ExecutionUUID}`);
+            statusResponse = await this.papiClient.get(`/audit_logs/${result.ExecutionUUID}`);
         }
         if (statusResponse.Status.Name === 'Success') {
             console.log("addon installed upgraded successfuly.");
