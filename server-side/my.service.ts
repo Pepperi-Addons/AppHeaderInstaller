@@ -83,7 +83,7 @@ class MyService {
     async installAddonRecursive(result: AddonAPIAsyncResult, addonName: string){
         let statusResponse = await this.papiClient.get(`/audit_logs/${result.ExecutionUUID}`);
 
-        while (statusResponse === undefined || statusResponse.Status.Name === 'New' || statusResponse.Status.Name === 'InProgress' || statusResponse.Status.Name === 'Started') {
+        while (!statusResponse || statusResponse.Status.Name === 'New' || statusResponse.Status.Name === 'InProgress' || statusResponse.Status.Name === 'Started') {
             await sleep(1000);
             statusResponse = await this.papiClient.get(`/audit_logs/${result.ExecutionUUID}`);
         }
