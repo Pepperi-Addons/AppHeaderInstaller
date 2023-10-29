@@ -22,13 +22,11 @@ export async function install(client: Client, request: Request): Promise<AddonAP
     const service = new MyService(client);
     try {
          await service.installAppHeader();
-         return {success: true, resultObject: {}}
-     }
-     catch (e: any) {
-         return {success: false, errorMessage: e.message}
-     }
-
-    //return { success: true, resultObject: {} };
+    }
+     catch (err) {
+        throw new Error(`Failed to install. error - ${err}`);
+    }
+    return {success: true, resultObject: {}}
 }
 
 export async function uninstall(client: Client, request: Request): Promise<AddonAPISyncResult> {
