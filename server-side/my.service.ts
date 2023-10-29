@@ -1,6 +1,7 @@
 import { AddonAPIAsyncResult, PapiClient} from '@pepperi-addons/papi-sdk'
 import { Client} from '@pepperi-addons/debug-server';
-import Semver from "semver";
+//import Semver from "semver";
+import semverLessThanComparator from 'semver/functions/lt'
 
 const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -53,7 +54,7 @@ class MyService {
             for (let i=0;i<this.addOnsToInstall.length;i++) {
                 const addOnToUpdate = installedAddons.find(o => o.Addon?.UUID === this.addOnsToInstall[i].uuid);
                 if (addOnToUpdate) {
-                    if (Semver.lt(addOnToUpdate.Version, this.addOnsToInstall[i].ver)){ //upgrade
+                    if (semverLessThanComparator(addOnToUpdate.Version, this.addOnsToInstall[i].ver)){ //upgrade
                         const res = await this.papiClient.addons.installedAddons.addonUUID(this.addOnsToInstall[i].uuid).upgrade(this.addOnsToInstall[i].ver);
                         await this.installAddonRecursive(res, this.addOnsToInstall[i].name);
                         }
