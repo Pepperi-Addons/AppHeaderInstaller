@@ -38,7 +38,7 @@ class MyService {
         {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.14', phased: false, release: false}, //wait for QA
         {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.46', phased: false, release: false}, //wait for QA
         {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.12', phased: false, release: false}, //wait for QA
-        {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.13', phased: false, release: false} //wait for QA
+        {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.17', phased: false, release: false} //wait for QA
     ]
 
     constructor(private client: Client) {
