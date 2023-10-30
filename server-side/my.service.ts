@@ -12,32 +12,33 @@ class MyService {
     papiClient: PapiClient;
 
     addOnsToInstall = [
-        {name: 'Pfs', uuid: '00000000-0000-0000-0000-0000000f11e5', ver: '1.3.8', phased: false, release: false},
-        {name: 'System Health', uuid: 'f8b9fa6f-aa4d-4c8d-a78c-75aabc03c8b3', ver: '1.1.81', phased: true, release: true},
-        {name: 'Nebula', uuid: '00000000-0000-0000-0000-000000006a91', ver: '1.0.112', phased: true, release: true},
-        {name: 'Sync', uuid: '5122dc6d-745b-4f46-bb8e-bd25225d350a', ver: '0.7.84', phased: false, release: false},
-        {name: 'Dimx', uuid: '44c97115-6d14-4626-91dc-83f176e9a0fc', ver: '1.0.13', phased: true, release: true},
-        {name: 'Cpi node', uuid: 'bb6ee826-1c6b-4a11-9758-40a46acb69c5', ver: '1.5.17', phased: false, release: false},
-        {name: 'Cpi node data', uuid: 'd6b06ad0-a2c1-4f15-bebb-83ecc4dca74b', ver: '0.6.17', phased: true, release: true},
-        {name: 'Papi', uuid: '00000000-0000-0000-0000-000000000a91', ver: '9.6.24', phased: true, release: true},
-        {name: 'cpapi', uuid: '00000000-0000-0000-0000-000000abcdef', ver: '9.6.31', phased: true, release: true},
-        {name: 'Core', uuid: '00000000-0000-0000-0000-00000000c07e', ver: '1.0.7', phased: true, release: true},
-        {name: 'Core resources', uuid: 'fc5a5974-3b30-4430-8feb-7d5b9699bc9f', ver: '1.0.23', phased: true, release: true},
-        {name: 'Configuration', uuid: '84c999c3-84b7-454e-9a86-71b7abc96554', ver: '0.6.102', phased: false, release: true},
-        {name: 'Flows', uuid: 'dc8c5ca7-3fcc-4285-b790-349c7f3908bd', ver: '0.6.17', phased: false, release: true},
-        {name: 'Cpas', uuid: '00000000-0000-0000-0000-0000003eba91', ver: '17.30.1', phased: false, release: false},
+        {name: 'Pfs', uuid: '00000000-0000-0000-0000-0000000f11e5', ver: '1.3.84', phased: false, release: true}, //done
+        {name: 'System Health', uuid: 'f8b9fa6f-aa4d-4c8d-a78c-75aabc03c8b3', ver: '1.1.81', phased: true, release: true}, //done
+        {name: 'Nebula', uuid: '00000000-0000-0000-0000-000000006a91', ver: '1.0.112', phased: true, release: true}, //done
+        {name: 'Sync', uuid: '5122dc6d-745b-4f46-bb8e-bd25225d350a', ver: '0.7.107', phased: true, release: true}, //done
+        {name: 'Dimx', uuid: '44c97115-6d14-4626-91dc-83f176e9a0fc', ver: '1.0.13', phased: true, release: true}, //done
+        {name: 'Cpi node', uuid: 'bb6ee826-1c6b-4a11-9758-40a46acb69c5', ver: '1.5.17', phased: false, release: false}, //wait for Simcha date, depends on UOM, UDE, Pricing
+        {name: 'Cpi node data', uuid: 'd6b06ad0-a2c1-4f15-bebb-83ecc4dca74b', ver: '0.6.17', phased: true, release: true}, //done
+        {name: 'Papi', uuid: '00000000-0000-0000-0000-000000000a91', ver: '9.6.24', phased: true, release: true}, //done
+        {name: 'cpapi', uuid: '00000000-0000-0000-0000-000000abcdef', ver: '9.6.31', phased: true, release: true}, //done
+        {name: 'Core', uuid: '00000000-0000-0000-0000-00000000c07e', ver: '1.0.7', phased: true, release: true}, //done
+        {name: 'Core resources', uuid: 'fc5a5974-3b30-4430-8feb-7d5b9699bc9f', ver: '1.0.23', phased: true, release: false}, //wait for ver 1.1, Shir
+        {name: 'Configuration', uuid: '84c999c3-84b7-454e-9a86-71b7abc96554', ver: '0.6.104', phased: false, release: true}, //wait for phased, Roi
+        {name: 'Flows', uuid: 'dc8c5ca7-3fcc-4285-b790-349c7f3908bd', ver: '0.6.19', phased: false, release: true}, //wait for phased, Roi
+        {name: 'Cpas', uuid: '00000000-0000-0000-0000-0000003eba91', ver: '17.30.1', phased: false, release: false}, //wait for Simcha
        // {name: 'Local storage', uuid: '5130126c-1c2a-446f-9d08-754269fdaa72', ver: '1.0.1', phased: false, release: false},
-        {name: 'Slugs', uuid: '4ba5d6f9-6642-4817-af67-c79b68c96977', ver: '1.2.23', phased: true, release: true},
-        {name: 'Assets Manager ', uuid: 'ad909780-0c23-401e-8e8e-f514cc4f6aa2', ver: '1.2.2', phased: false, release: false},
-        {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.28', phased: false, release: false},
-        {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.5', phased: false, release: false},
-        {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.10', phased: false, release: false},
-        {name: 'Themes', uuid: '95501678-6687-4fb3-92ab-1155f47f839e', ver: '2.1.4', phased: false, release: true},
-        {name: 'Application Header', uuid: '9bc8af38-dd67-4d33-beb0-7d6b39a6e98d', ver: '0.5.33', phased: false, release: false},
-        {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.14', phased: false, release: false},
-        {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.46', phased: false, release: false},
-        {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.12', phased: false, release: true},
-        {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.13', phased: false, release: true}
+        /************UI BLOCKS**************/
+        {name: 'Slugs', uuid: '4ba5d6f9-6642-4817-af67-c79b68c96977', ver: '1.2.23', phased: true, release: true}, //done
+        {name: 'Assets Manager ', uuid: 'ad909780-0c23-401e-8e8e-f514cc4f6aa2', ver: '1.2.2', phased: false, release: false}, //wait for avner
+        {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.28', phased: false, release: false}, //wait for QA
+        {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.5', phased: false, release: false}, //wait for QA
+        {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.10', phased: false, release: false}, //wait for QA
+        {name: 'Themes', uuid: '95501678-6687-4fb3-92ab-1155f47f839e', ver: '2.1.4', phased: false, release: true}, //wait for QA
+        {name: 'Application Header', uuid: '9bc8af38-dd67-4d33-beb0-7d6b39a6e98d', ver: '0.5.33', phased: false, release: false}, //wait for QA
+        {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.14', phased: false, release: false}, //wait for QA
+        {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.46', phased: false, release: false}, //wait for QA
+        {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.12', phased: false, release: false}, //wait for QA
+        {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.13', phased: false, release: false} //wait for QA
     ]
 
     constructor(private client: Client) {
