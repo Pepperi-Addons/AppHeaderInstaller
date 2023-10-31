@@ -23,8 +23,8 @@ class MyService {
         {name: 'cpapi', uuid: '00000000-0000-0000-0000-000000abcdef', ver: '9.6.31', phased: true, release: true}, //done
         {name: 'Core', uuid: '00000000-0000-0000-0000-00000000c07e', ver: '1.0.7', phased: true, release: true}, //done
         {name: 'Core resources', uuid: 'fc5a5974-3b30-4430-8feb-7d5b9699bc9f', ver: '1.0.23', phased: true, release: false}, //wait for ver 1.1, Shir
-        {name: 'Configuration', uuid: '84c999c3-84b7-454e-9a86-71b7abc96554', ver: '0.6.104', phased: false, release: true}, //wait for phased, Roi
-        {name: 'Flows', uuid: 'dc8c5ca7-3fcc-4285-b790-349c7f3908bd', ver: '0.6.19', phased: false, release: true}, //wait for phased, Roi
+        {name: 'Configuration', uuid: '84c999c3-84b7-454e-9a86-71b7abc96554', ver: '0.6.105', phased: true, release: true}, //done
+        {name: 'Flows', uuid: 'dc8c5ca7-3fcc-4285-b790-349c7f3908bd', ver: '0.6.20', phased: true, release: true}, //done
         {name: 'Cpas', uuid: '00000000-0000-0000-0000-0000003eba91', ver: '17.30.1', phased: false, release: false}, //wait for Simcha
        // {name: 'Local storage', uuid: '5130126c-1c2a-446f-9d08-754269fdaa72', ver: '1.0.1', phased: false, release: false},
         /************UI BLOCKS**************/
