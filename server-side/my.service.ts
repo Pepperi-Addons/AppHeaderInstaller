@@ -34,7 +34,7 @@ class MyService {
         {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.9', phased: false, release: false}, //wait for QA
         {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.22', phased: false, release: false}, //wait for QA
         {name: 'Themes', uuid: '95501678-6687-4fb3-92ab-1155f47f839e', ver: '2.1.5', phased: false, release: false}, //wait for qa
-        {name: 'Application Header', uuid: '9bc8af38-dd67-4d33-beb0-7d6b39a6e98d', ver: '0.5.40', phased: false, release: false}, //wait for QA
+        {name: 'Application Header', uuid: '9bc8af38-dd67-4d33-beb0-7d6b39a6e98d', ver: '0.5.41', phased: false, release: false}, //wait for QA
         {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.18', phased: false, release: false}, //wait for QA
         {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.49', phased: false, release: false}, //wait for QA
         {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.12', phased: false, release: false}, //wait for QA
