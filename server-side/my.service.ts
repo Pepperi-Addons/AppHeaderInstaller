@@ -38,6 +38,8 @@ class MyService {
         {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.19', phased: false, release: true}, //done
         {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.51', phased: false, release: true}, //done
         {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.12', phased: false, release: true}, //done
+        {name: 'filter block', uuid: 'd00398a6-3b65-47a0-b02c-08f5de960740', ver: '0.5.28', phased: true, release: true}, //done
+        {name: 'rich text', uuid: '3864cd44-b388-41c5-8af9-ec200f72b3f3', ver: '1.0.17', phased: false, release: true}, //done
         {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.19', phased: false, release: true} //done
     ]
 
