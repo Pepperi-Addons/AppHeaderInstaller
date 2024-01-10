@@ -30,16 +30,16 @@ class MyService {
         /************UI BLOCKS**************/
         {name: 'Slugs', uuid: '4ba5d6f9-6642-4817-af67-c79b68c96977', ver: '1.2.25', phased: true, release: true}, //done
         {name: 'Assets Manager', uuid: 'ad909780-0c23-401e-8e8e-f514cc4f6aa2', ver: '1.2.15', phased: true, release: true}, //done
-        {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.43', phased: false, release: true}, //done
-        {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.19', phased: false, release: true}, //done
-        {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.39', phased: false, release: true}, //done
+        {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.123', phased: false, release: true}, //done
+        {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.20', phased: false, release: true}, //done
+        {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.41', phased: false, release: true}, //done
         {name: 'Themes', uuid: '95501678-6687-4fb3-92ab-1155f47f839e', ver: '2.1.8', phased: false, release: true}, //done
         {name: 'Application Header', uuid: '9bc8af38-dd67-4d33-beb0-7d6b39a6e98d', ver: '0.5.45', phased: false, release: true}, //done
-        {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.19', phased: false, release: true}, //done
-        {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.51', phased: false, release: true}, //done
+        {name: 'Banner', uuid: '58054aa9-5667-4fbf-9b9a-f9c94cd00906', ver: '0.9.27', phased: false, release: true}, //done
+        {name: 'Buttons', uuid: '0eb2627d-2bc2-4d73-9ac6-d5b191cb59a2', ver: '0.0.56', phased: false, release: true}, //done
         {name: 'basic-logic-blocks', uuid: 'a446f8ae-3787-497b-9a92-82e571bdf48e', ver: '1.0.16', phased: false, release: true}, //done
-        {name: 'filter block', uuid: 'd00398a6-3b65-47a0-b02c-08f5de960740', ver: '0.5.28', phased: true, release: true}, //done
-        {name: 'rich text', uuid: '3864cd44-b388-41c5-8af9-ec200f72b3f3', ver: '1.0.17', phased: false, release: true}, //done
+        {name: 'filter block', uuid: 'd00398a6-3b65-47a0-b02c-08f5de960740', ver: '0.5.36', phased: true, release: true}, //done
+        {name: 'rich text', uuid: '3864cd44-b388-41c5-8af9-ec200f72b3f3', ver: '1.0.29', phased: false, release: true}, //done
         {name: 'WebApp', uuid: '00000000-0000-0000-1234-000000000b2b', ver: '18.0.20', phased: false, release: true} //done
     ]
 
