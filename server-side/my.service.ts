@@ -30,7 +30,7 @@ class MyService {
         /************UI BLOCKS**************/
         {name: 'Slugs', uuid: '4ba5d6f9-6642-4817-af67-c79b68c96977', ver: '1.2.25', phased: true, release: true}, //done
         {name: 'Assets Manager', uuid: 'ad909780-0c23-401e-8e8e-f514cc4f6aa2', ver: '1.2.15', phased: true, release: true}, //done
-        {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.125', phased: false, release: true}, //done
+        {name: 'Pages', uuid: '50062e0c-9967-4ed4-9102-f2bc50602d41', ver: '2.0.127', phased: false, release: true}, //done
         {name: 'Gallery2', uuid: '194772e8-1c45-48ee-9401-bea82f0d7c65', ver: '2.0.20', phased: false, release: true}, //done
         {name: 'Slideshow2', uuid: '16d2052b-55b7-43b5-9d3b-a2f9d9950d59', ver: '2.0.41', phased: false, release: true}, //done
         {name: 'Themes', uuid: '95501678-6687-4fb3-92ab-1155f47f839e', ver: '2.1.8', phased: false, release: true}, //done
