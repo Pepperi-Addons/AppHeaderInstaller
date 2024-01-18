@@ -12,7 +12,7 @@ class MyService {
     papiClient: PapiClient;
 
     addOnsToInstall = [
-        {name: 'Pepperi Pack', uuid: '4817f4fe-9ff6-435e-9415-96b1142675eb', ver: '1.1.6', phased: false, release: true}, //done
+        {name: 'Pepperi Pack', uuid: '4817f4fe-9ff6-435e-9415-96b1142675eb', ver: '1.1.7', phased: false, release: true}, //done
         {name: 'Pfs', uuid: '00000000-0000-0000-0000-0000000f11e5', ver: '1.3.84', phased: false, release: true}, //done
         {name: 'System Health', uuid: 'f8b9fa6f-aa4d-4c8d-a78c-75aabc03c8b3', ver: '1.1.81', phased: true, release: true}, //done
         {name: 'Nebula', uuid: '00000000-0000-0000-0000-000000006a91', ver: '1.1.61', phased: false, release: true}, //wait for 1.1.61, bug fix
