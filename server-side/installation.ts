@@ -34,6 +34,13 @@ export async function uninstall(client: Client, request: Request): Promise<Addon
 }
 
 export async function upgrade(client: Client, request: Request): Promise<AddonAPISyncResult> {
+    const service = new MyService(client);
+    try {
+         await service.installAppHeader();
+    }
+     catch (err) {
+        throw new Error(`Failed to upgrade. error - ${err}`);
+    }
     return {success: true, resultObject: {}}
 }
 
